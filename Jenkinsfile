@@ -3,7 +3,7 @@ pipeline:
   agent: none
     any:
   stages:
-    - stage: "Login to DockerHub"
+    - stage: "Stage1"
       agent: any
       steps:
         - sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
