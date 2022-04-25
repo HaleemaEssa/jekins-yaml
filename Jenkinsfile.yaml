@@ -13,6 +13,6 @@ pipeline:
      - stage: "RPiNode"
        steps:
          - sh 'echo "rpi" '
-         - git branch: 'main', url: 'https://github.com/HaleemaEssa/first_jenkins_project.git'
+         - git "https://github.com/HaleemaEssa/first_jenkins_project.git"
          
               
