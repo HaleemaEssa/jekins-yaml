@@ -15,14 +15,9 @@ pipeline:
            node:
              label: 'linuxslave1'
        steps:
-         scripts:
-           - try:
-              - sh 'echo "rpi" '
-              - git branch: 'main', url: 'https://github.com/HaleemaEssa/first_jenkins_project.git'
-              - sleep(time: 3, unit: "SECONDS")
-              - sh 'docker run --privileged -t haleema/docker-rpi'
-              - sleep(time: 4, unit: "SECONDS")
-           - catch (Throwable e):
-              - echo "Caught ${e.toString()}"
-              - currentBuild.result = "SUCCESS"
+         - sh 'echo "rpi" '
+         - git branch: 'main', url: 'https://github.com/HaleemaEssa/first_jenkins_project.git'
+         - sleep(time: 3, unit: "SECONDS")
+         - sh 'docker run --privileged -t haleema/docker-rpi'
+         
               
