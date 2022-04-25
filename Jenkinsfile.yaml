@@ -1,14 +1,12 @@
 pipeline:
-  environment: 
-    DOCKERHUB_CREDENTIALS: credentials('haleema-dockerhub')
-  
-  agent: 
+   agent: 
     none:
-  stages:
-      - stage: "Stage1"
-          
-        steps:
-          - sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
-          - sh "java -version"
-          - sh "git --version"
-          - sh "docker --version"
+   environment: 
+    DOCKERHUB_CREDENTIALS: credentials('haleema-dockerhub')
+   stages:
+     - stage: "Stage1"
+       steps:
+         - sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
+         - sh "java -version"
+         - sh "git --version"
+         - sh "docker --version"
