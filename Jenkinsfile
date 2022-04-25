@@ -3,7 +3,7 @@ pipeline:
   agent: none
   stages:
     - stage: "Stage1"
-      agent: any
+      //agent: any
       steps:
         //- sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
         - sh "java -version"
