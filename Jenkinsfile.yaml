@@ -1,5 +1,5 @@
-pipeline:
-  withEnv: DOCKERHUB_CREDENTIALS = credentials('haleema-dockerhub')
+rpipeline:
+  environment: DOCKERHUB_CREDENTIALS = credentials('haleema-dockerhub')
   agent: none
     stages:
       - stage: "Stage1"
