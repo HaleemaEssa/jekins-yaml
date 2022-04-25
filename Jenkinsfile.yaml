@@ -12,8 +12,7 @@ pipeline:
          - sh "docker --version"
      - stage: "RPiNode"
          agent:
-           node:
-             label: 'linuxslave1'
+           label: 'linuxslave1'
        steps:
          - sh 'echo "rpi" '
          - git branch: 'main', url: 'https://github.com/HaleemaEssa/first_jenkins_project.git'
