@@ -1,6 +1,5 @@
 pipeline:
   environment: DOCKERHUB_CREDENTIALS=credentials('haleema-dockerhub')
-  agent: any
   stages:
     - stage: "Stage1"
       steps:
