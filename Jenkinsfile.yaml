@@ -10,7 +10,7 @@ pipeline:
          - sh "java -version"
          - sh "git --version"
          - sh "docker --version"
-     - stage: "RPi-node"
+     - stage: "RPiNode"
          agent:
            node:
              label: 'linuxslave1'
