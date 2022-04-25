@@ -11,7 +11,7 @@ pipeline:
          - sh "git --version"
          - sh "docker --version"
      - stage: "RPiNode"
-         steps:
+       steps:
          - sh 'echo "rpi" '
          - git branch: 'main', url: 'https://github.com/HaleemaEssa/first_jenkins_project.git'
          
