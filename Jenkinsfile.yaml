@@ -12,7 +12,7 @@ pipeline:
          - sh "docker --version"
      - stage: "RPi-node"
          options:
-           - "timeout(time: 40, unit: "SECONDS")"
+           - "timeout(time: 40, unit: 'SECONDS')"
          agent:
            node:
              label: 'linuxslave1'
