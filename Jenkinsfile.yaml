@@ -1,14 +1,3 @@
-@Library("shared-library") _
-def str = 
-'''
-steps:
- - type: sh
-   script: ls -la 
- - type: echo
-   message: xxx
-'''
-Closure closure = yamlCompiler(str)
-closure.call()
 pipeline:
    agent: 
     any:
@@ -22,8 +11,9 @@ pipeline:
          - sh "git --version"
          - sh "docker --version"
      - stage: "RPiNode"
+         agent: 'aws-slave'
        steps:
          - sh 'echo "rpi" '
-         - git "https://github.com/HaleemaEssa/first_jenkins_project.git"
+        
          
               
