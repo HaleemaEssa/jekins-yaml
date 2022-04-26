@@ -19,5 +19,5 @@ pipeline:
            try:
              - sh 'echo "rpi" '
            except:
-             - echo "Caught ${e.toString()}"
+             - echo "Caught "
              - sh 'echo "rpi" '
