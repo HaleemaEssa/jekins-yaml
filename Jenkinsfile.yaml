@@ -15,9 +15,8 @@ pipeline:
          label: 'linuxslave1'
        
        steps:
-         script:
-           try:
-             - sh 'echo "rpi" '
-           except yaml.YAMLError, exc:
-             - echo "Caught "
-             - sh 'echo "rpi" '
+         try:
+           - sh 'echo "rpi" '
+         except yaml.YAMLError, exc:
+           - echo "Caught "
+           - sh 'echo "rpi" '
