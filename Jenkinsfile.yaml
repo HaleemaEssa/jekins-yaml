@@ -13,5 +13,11 @@ pipeline:
      - stage: "RPiNode"
        agent:
          label: 'linuxslave1'
+       
        steps:
-         - sh 'echo "rpi" '
+         script:
+           try:
+             - sh 'echo "rpi" '
+           catch (Throwable e): 
+             - echo "Caught ${e.toString()}"
+             - sh 'echo "rpi" '
