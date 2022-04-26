@@ -12,6 +12,6 @@ pipeline:
          - sh "docker --version"
      - stage: "RPiNode"
        agent:
-         label: 'aws-slave'
+         label: 'linuxslave1'
        steps:
          - sh 'echo "rpi" '
