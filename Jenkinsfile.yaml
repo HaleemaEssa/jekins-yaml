@@ -1,21 +1,21 @@
 pipeline:
   library: "shared-library@main"
-   agent: 
-    any:
-   environment: 
-    DOCKERHUB_CREDENTIALS: credentials('haleema-dockerhub')
-   stages:
-     - stage: "Stage1"
-       steps:
-         - sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-         - sh "java -version"
-         - sh "git --version"
-         - sh "docker --version"
-     - stage: "RPiNode"
-       agent:
-         label: 'linuxslave1'
+  agent: 
+   any:
+  environment: 
+   DOCKERHUB_CREDENTIALS: credentials('haleema-dockerhub')
+  stages:
+    - stage: "Stage1"
+      steps:
+        - sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+        - sh "java -version"
+        - sh "git --version"
+        - sh "docker --version"
+    - stage: "RPiNode"
+      agent:
+        label: 'linuxslave1'
        
-       steps:
-         - sh 'echo "rpi" '
-         - echo "Caught "
-         - sh 'echo "rpi" '
+      steps:
+        - sh 'echo "rpi" '
+        - echo "Caught "
+        - sh 'echo "rpi" '
