@@ -1,4 +1,5 @@
 pipeline:
+  library: "shared-library"
    agent: 
     any:
    environment: 
